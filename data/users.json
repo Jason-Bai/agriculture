@@ -1,0 +1,25 @@
+[{
+  "name": "baiyu",
+  "email": "baiyu@qq.com",
+  "pass": "baiyu",
+  "role": "admin",
+  "isDelete": "no",
+  "createdAt": "2016-01-01 00:00:00",
+  "updatedAt": "2016-01-01 00:00:00"
+}, {
+  "name": "wangjie",
+  "email": "wangjie@qq.com",
+  "pass": "wangjie",
+  "role": "admin",
+  "isDelete": "no",
+  "createdAt": "2016-01-01 00:00:00",
+  "updatedAt": "2016-01-01 00:00:00"
+}, {
+  "name": "test",
+  "email": "test@qq.com",
+  "pass": "test",
+  "role": "member",
+  "isDelete": "no",
+  "createdAt": "2016-01-01 00:00:00",
+  "updatedAt": "2016-01-01 00:00:00"
+}]

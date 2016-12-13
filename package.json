@@ -1,0 +1,33 @@
+{
+  "name": "agriculture-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init:dev": "node ./bin/seeder",
+    "start:dev": "nodemon ./bin/www",
+    "migrate": "sequelize db:migrate",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "bcrypt": "^1.0.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "mysql": "^2.12.0",
+    "sequelize": "^3.27.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "readdir": "0.0.13",
+    "supertest": "^2.0.1"
+  }
+}

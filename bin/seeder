@@ -1,0 +1,32 @@
+#!/bin/node
+const async   = require('async');
+const readdir = require('readdir');
+const { execSync } = require('child_process');
+
+const path = './server/seeders'
+
+exec = (seeder, cb) => {
+  const revertedCmd = `sequelize db:seed:undo --seed ${seeder}`,
+        migratedCmd = `sequelize db:seed --seed ${seeder}`;
+
+  execSync(`${revertedCmd};${migratedCmd}`, (err, stdout, stderr) => {
+    if (err) {
+      return cb(err);
+    }
+    return cb(null, stdout);
+  });
+}
+
+run = () => {
+  const seeders = readdir.readSync(path)
+
+  async.map(seeders, exec, (err, results) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(results);
+  })
+}
+
+run();
